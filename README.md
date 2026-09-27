@@ -18,7 +18,7 @@ A web application that uses AI to detect and classify road damage from uploaded 
 
 - **Backend**: Python/Flask
 - **Frontend**: HTML/CSS/JavaScript
-- **AI/ML**: TensorFlow (with pre-trained MobileNetV2 model)
+- **AI/ML**: TensorFlow (with CNN model)
 - **Image Processing**: Pillow (PIL)
 
 ## Installation
@@ -34,12 +34,11 @@ A web application that uses AI to detect and classify road damage from uploaded 
    ```
 
 3. **Open the Web Application**:
-   - Open `index.html` in your web browser
-   - Or serve it with a local server (recommended)
+   - Navigate to `http://localhost:5000` in your web browser
 
 ## Usage
 
-1. Open the web application in your browser
+1. Open the web application in your browser at `http://localhost:5000`
 2. Upload a road image by:
    - Clicking "Select Image" button
    - Dragging and dropping an image onto the upload area
@@ -48,7 +47,7 @@ A web application that uses AI to detect and classify road damage from uploaded 
 
 ## API Endpoints
 
-- `GET /` - API information
+- `GET /` - Main application page
 - `GET /health` - Health check endpoint
 - `POST /predict` - Upload image for damage detection
   - Body: `image` (file)
@@ -63,12 +62,14 @@ AI Road Damage Detection System/
 ├── styles.css          # Frontend styling
 ├── script.js           # Frontend JavaScript
 ├── requirements.txt    # Python dependencies
+├── start.bat          # Quick start script (Windows)
+├── .gitignore         # Git ignore file
 └── README.md          # This file
 ```
 
 ## Notes
 
-- The current implementation uses a pre-trained MobileNetV2 model as a placeholder
+- The current implementation uses a CNN model for demonstration
 - For production use, train a custom model on a road damage dataset
 - The server runs on `http://localhost:5000` by default
 - CORS is enabled to allow frontend-backend communication
