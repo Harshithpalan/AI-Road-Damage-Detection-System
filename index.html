@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Road Damage Detection System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Road Damage Detection System</h1>
+            <p>Upload road images to detect and classify damage</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📷</div>
+                    <p>Drag and drop an image here or click to select</p>
+                    <input type="file" id="imageInput" accept="image/*" hidden>
+                    <button class="btn-primary" id="selectBtn">Select Image</button>
+                </div>
+
+                <div class="preview-section" id="previewSection" style="display: none;">
+                    <h3>Uploaded Image</h3>
+                    <div class="image-preview">
+                        <img id="previewImage" alt="Preview">
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn-secondary" id="clearBtn">Clear</button>
+                        <button class="btn-primary" id="analyzeBtn">Analyze Damage</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h3>Detection Results</h3>
+                <div class="result-card">
+                    <div class="result-header">
+                        <span class="result-label">Damage Type:</span>
+                        <span class="result-value" id="damageType">-</span>
+                    </div>
+                    <div class="result-header">
+                        <span class="result-label">Confidence:</span>
+                        <span class="result-value" id="confidence">-</span>
+                    </div>
+                    <div class="probability-chart">
+                        <h4>Probability Distribution</h4>
+                        <div id="probabilityBars"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing image...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>AI Road Damage Detection System © 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
